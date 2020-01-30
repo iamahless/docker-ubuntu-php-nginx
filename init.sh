@@ -77,6 +77,7 @@ fi
 
 ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.conf
 service php7.2-fpm start
+service nginx start
 
 
 # /etc/php/php-fpm.d/www.conf
