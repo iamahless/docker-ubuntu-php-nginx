@@ -10,6 +10,7 @@ RUN apt-get -y upgrade
 RUN apt-get -y install software-properties-common
 RUN apt-get install nginx -y
 RUN apt-get install \
+	php7.2-dom \
 	php7.2-bcmath \
 	php7.2-bz2 \
 	php7.2-intl \
