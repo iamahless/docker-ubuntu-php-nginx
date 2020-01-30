@@ -19,7 +19,7 @@ RUN apt-get install \
 	php7.2-zip \
 	php7.2-fpm \
 	php7.2-json \
-	php7.2-curl -y && service nginx restart
+	php7.2-curl -y && service nginx start
 
 #Install Composer 
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
