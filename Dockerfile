@@ -1,7 +1,6 @@
 FROM ubuntu:18.04
 MAINTAINER Friday Godswill <friday@hotels.ng>
 
-ADD conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 # Install Environment
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -11,6 +10,7 @@ RUN apt-get -y install software-properties-common
 RUN apt-get install nginx -y
 RUN apt-get install \
 	php7.2-dom \
+	php7.2-xml \
 	php7.2-bcmath \
 	php7.2-bz2 \
 	php7.2-intl \
@@ -22,7 +22,7 @@ RUN apt-get install \
 	php7.2-json \
 	php7.2-curl -y && service nginx start
 
-#Install Composer 
+#Install Composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" && \
 php composer-setup.php --install-dir=/usr/bin --filename=composer && \
 php -r "unlink('composer-setup.php');"

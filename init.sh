@@ -88,9 +88,3 @@ service nginx start
 # pm.max_spare_servers = 35
 # pm.max_requests = 500
 
-
-# ------------------------------------------
-# Start supervisord and services
-# ------------------------------------------
-
-supervisord -n
