@@ -76,7 +76,7 @@ fi
 # sed -i "s/;pm.max_requests = 200/pm.max_requests = 0/g" /etc/php/php-fpm.d/www.conf
 
 ln -s /etc/nginx/sites-available/default.conf /etc/nginx/sites-enabled/default.conf
-service php7.2-fpm start
+service php7.4-fpm start
 service nginx start
 
 
